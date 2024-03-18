@@ -1,0 +1,145 @@
+body {
+    width: auto;
+    height: auto;
+    background-color: rgb(253, 248, 244);
+}
+
+header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    place-items: center;
+    border: 0.06cm dashed rgb(229, 39, 39);
+    border-radius: 20px;
+
+    h1 {
+        grid-column: 2 / 3;
+    }
+
+    .left {
+        width: 200px;
+        grid-column: 1 / 2;
+    }
+
+    .right {
+        width: 200px;
+        grid-column: 3 / 4;
+    }
+
+}
+
+.form-field {
+    text-align: center;
+}
+
+.form-separation{
+    border: 0.1px dashed rgb(229, 39, 39);
+    width: 300px;
+}
+
+.form__inputs {
+
+    input, select {
+        width: 450px;
+        border: 1px solid rgb(229, 39, 39);
+        margin: 5px;
+        border-radius: 10px;
+    }
+
+    option {
+        text-align: center;
+    }
+}
+
+#buttons {
+    margin: 5px;
+
+    button {
+        width: 120px;
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        margin: 5px;
+    }
+  
+    #submit-botton {
+        background-color: rgb(216, 88, 88);
+        color: white;
+    }
+
+    #reset-button{
+        background-color: white;
+        border: 1px solid rgb(229, 39, 39);
+    }
+}
+
+hr {
+    margin-top: 20px;
+    border: 0.1px dashed rgb(229, 39, 39);
+}
+
+.article-template {
+    font-family: sans-serif;
+    width: auto;
+    display: flex;
+
+    #image {
+        padding: 20px;
+    }
+
+    img{
+        width: 200px;
+        border: 3px solid rgb(229, 39, 39);
+    }
+
+    hr{
+        border: 1px solid rgb(229, 39, 39);
+    }
+
+    #stock {
+        text-align: center;
+        width: 60px;
+        border: 1px solid lightgrey;
+        color: green;
+        border-radius: 5px;
+        padding: 4px;
+        margin: 10px 3px;
+        background-color: lightgrey;
+    }
+
+    button {
+        padding: 8px;
+        background-color: rgb(216, 88, 88);
+        color: white;
+        border-radius: 10px;
+        border: solid;
+        margin: 10px 0px;
+    }
+
+    button:hover {
+        cursor: pointer;
+        background-color: red;
+    }
+
+    #stock:hover {
+        cursor: pointer;
+        background-color: white;
+    }
+
+    #stock:active {
+        color: grey;
+    }
+
+    button:active{
+        color:lightpink;
+    }
+    .in-stock{
+        color: red;
+    }
+      
+      
+
+}
+
+
+

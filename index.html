@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css"/>
+    <script defer src="./main.js"></script>
+    <title>The Pokemon Emporium</title>
+</head>
+<body>
+    <header>
+        <img class="left" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWlsNzFxMnhkcm1reGRoMTlvZmF0MGF5cmV4NWdoMGd4bTJ6cWl6NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/XwENvq9FeAr7zd3QD8/giphy.gif"/>
+        <h1>Pokemon Store Inventory</h1>
+        <img class="right"src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWlsNzFxMnhkcm1reGRoMTlvZmF0MGF5cmV4NWdoMGd4bTJ6cWl6NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/XwENvq9FeAr7zd3QD8/giphy.gif"/>
+    </header>
+    <main>
+        <section class="form-field">
+            <h1>Add A New Pokemon</h1>
+            <hr class="form-separation">
+            <form class="form__inputs">
+                <div>
+                    <label>Name</label><br>
+                    <input></input>
+                  </div>
+                  <div>
+                    <label>Element</label><br>
+                    <input></input>
+                  </div>
+                  <div>
+                    <label>Image URL</label><br>
+                    <input></input>
+                  </div>
+                  <div>
+                    <label>Price</label><br>
+                    <input></input>
+                  </div>
+                  <div>
+                    <label>In Stock</label><br>
+                    <select>
+                      <option>-- Select One --</option>
+                      <option value="yes">Yes</option>
+                      <option value="no">No</option>
+                    </select>
+                  </div>
+                  <div id="buttons">
+                    <button id="reset-button"> Reset</button>
+                    <button type="submit" id="submit-botton">Submit</button>
+                </div>
+            </form>
+            <hr>
+        </section>
+        <article class="article-template">
+        <section id="image">
+            <img src="https://img.pokemondb.net/artwork/large/chikorita.jpg"/>
+        </section>
+        <section id="description">
+            <h2>Chikorita</h2>
+            <hr>
+            <h3>Grass</h3>
+            <h4>$300.000</h4>
+            <button id="stock">In Stock</button><br>
+            <button>Remove</button>
+        </section>
+    </article>
+    </main>
+    <footer></footer>
+</body>
+</html>
