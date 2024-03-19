@@ -19,50 +19,159 @@
             <hr class="form-separation">
             <form class="form__inputs">
                 <div>
-                    <label>Name</label><br>
-                    <input></input>
-                  </div>
-                  <div>
-                    <label>Element</label><br>
-                    <input></input>
-                  </div>
-                  <div>
-                    <label>Image URL</label><br>
-                    <input></input>
-                  </div>
-                  <div>
-                    <label>Price</label><br>
-                    <input></input>
-                  </div>
-                  <div>
-                    <label>In Stock</label><br>
-                    <select>
+                    <label for="url">Image URL</label><br>
+                    <input name="url" type="text" id="url" required></input>
+                </div>
+                <div>
+                    <label for="name">Name</label><br>
+                    <input name="name" type="text" id="name" required></input>
+                </div>
+                <div>
+                    <label for="type">Type</label><br>
+                    <input name="type" type="text" id="type"></input>
+                </div>
+                <div>
+                    <label for="height">Height</label><br>
+                    <input name="height" type="text" id="height"></input>
+                </div>
+                <div>
+                    <label for="weight">Weight</label><br>
+                    <input name="weight" type="text" id="weight"></input>
+                </div>
+                <div>
+                    <label for="price">Price</label><br>
+                    <input name="price" type="text" id="price" required></input>
+                </div>
+                <div>
+                    <label for="inStock">In Stock</label><br>
+                    <select name="inStock" id="inStock">
                       <option>-- Select One --</option>
                       <option value="yes">Yes</option>
                       <option value="no">No</option>
                     </select>
-                  </div>
-                  <div id="buttons">
+                </div>
+                <div id="buttons">
                     <button id="reset-button"> Reset</button>
                     <button type="submit" id="submit-botton">Submit</button>
                 </div>
             </form>
-            <hr>
         </section>
-        <article class="article-template">
-        <section id="image">
-            <img src="https://img.pokemondb.net/artwork/large/chikorita.jpg"/>
+        <hr>
+        <section class="items-field">
+            <article class="article-template">
+                <section id="image">
+                     <img src="https://img.pokemondb.net/artwork/large/chikorita.jpg" alt="chikorita"/>
+                </section>
+                <section id="description">
+                    <h2>Chikorita</h2>
+                    <div class="info">
+                        <p class="type">GRASS</p>
+                        <p class="height">2'11"</p>
+                        <p class="weight">14.1 lbs</p>
+                        <p class="price">$300.000</p>
+                    </div>
+                    <div class="button-section">
+                        <div class="stock-buttons">
+                            <button id="increment">+</button>
+                            <div id="stock"><span>3 </span>In Stock</div>
+                            <button id="decrement">-</button>
+                        </div>
+                        <button id="remove">Remove</button>
+                    </div>
+                </section>
+            </article>
+            <article class="article-template">
+                <section id="image">
+                     <img src="https://img.pokemondb.net/artwork/large/chikorita.jpg" alt="chikorita"/>
+                </section>
+                <section id="description">
+                    <h2>Chikorita</h2>
+                    <div class="info">
+                        <p class="type">GRASS</p>
+                        <p class="height">2'11"</p>
+                        <p class="weight">14.1 lbs</p>
+                        <p class="price">$300.000</p>
+                    </div>
+                    <div class="button-section">
+                        <div class="stock-buttons">
+                            <button id="increment">+</button>
+                            <div id="stock"><span>3 </span>In Stock</div>
+                            <button id="decrement">-</button>
+                        </div>
+                        <button id="remove">Remove</button>
+                    </div>
+                </section>
+            </article>
+            <article class="article-template">
+                <section id="image">
+                     <img src="https://img.pokemondb.net/artwork/large/chikorita.jpg" alt="chikorita"/>
+                </section>
+                <section id="description">
+                    <h2>Chikorita</h2>
+                    <div class="info">
+                        <p class="type">GRASS</p>
+                        <p class="height">2'11"</p>
+                        <p class="weight">14.1 lbs</p>
+                        <p class="price">$300.000</p>
+                    </div>
+                    <div class="button-section">
+                        <div class="stock-buttons">
+                            <button id="increment">+</button>
+                            <div id="stock"><span>3 </span>In Stock</div>
+                            <button id="decrement">-</button>
+                        </div>
+                        <button id="remove">Remove</button>
+                    </div>
+                </section>
+            </article>
+            <article class="article-template">
+                <section id="image">
+                     <img src="https://img.pokemondb.net/artwork/large/chikorita.jpg" alt="chikorita"/>
+                </section>
+                <section id="description">
+                    <h2>Chikorita</h2>
+                    <div class="info">
+                        <p class="type">GRASS</p>
+                        <p class="height">2'11"</p>
+                        <p class="weight">14.1 lbs</p>
+                        <p class="price">$300.000</p>
+                    </div>
+                    <div class="button-section">
+                        <div class="stock-buttons">
+                            <button id="increment">+</button>
+                            <div id="stock"><span>3 </span>In Stock</div>
+                            <button id="decrement">-</button>
+                        </div>
+                        <button id="remove">Remove</button>
+                    </div>
+                </section>
+            </article>
+            <article class="article-template">
+                <section id="image">
+                     <img src="https://img.pokemondb.net/artwork/large/chikorita.jpg" alt="chikorita"/>
+                </section>
+                <section id="description">
+                    <h2>Chikorita</h2>
+                    <div class="info">
+                        <p class="type">GRASS</p>
+                        <p class="height">2'11"</p>
+                        <p class="weight">14.1 lbs</p>
+                        <p class="price">$300.000</p>
+                    </div>
+                    <div class="button-section">
+                        <div class="stock-buttons">
+                            <button id="increment">+</button>
+                            <div id="stock"><span>3 </span>In Stock</div>
+                            <button id="decrement">-</button>
+                        </div>
+                        <button id="remove">Remove</button>
+                    </div>
+                </section>
+            </article>
         </section>
-        <section id="description">
-            <h2>Chikorita</h2>
-            <hr>
-            <h3>Grass</h3>
-            <h4>$300.000</h4>
-            <button id="stock">In Stock</button><br>
-            <button>Remove</button>
-        </section>
-    </article>
     </main>
-    <footer></footer>
+    <footer>
+        
+    </footer>
 </body>
 </html>
