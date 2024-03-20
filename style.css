@@ -1,9 +1,8 @@
 body {
     width: auto;
-    height: auto;
     font-family: cursive;
     background-size: 100px;
-    background-image: linear-gradient(#a5e8da, #f9dee1, #fcf4dd) ;
+    background-image: linear-gradient(#a5e8da, #fcf4dd, #f9dee1, #a5e8da) ;
 }
 
 header {
@@ -113,6 +112,7 @@ hr {
     
     img{
         width: 200px;
+        height: 270px;
         border: 3px solid #fbc3ca;
     }
     
@@ -148,8 +148,9 @@ hr {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
 
-            #increment{
+            #increment {
                 grid-row: 1 / 2;
+                grid-column: 1 / 2;
                 width: auto;
                 margin: 10px;
                 border-radius: 10px;
@@ -158,8 +159,10 @@ hr {
                 border: none;
                 cursor: pointer;
             }
+
     
             #stock{
+                grid-column: 2 / 3;
                 grid-row: 1 / 2;
                 text-align: center;
                 width: 60px;
@@ -169,6 +172,7 @@ hr {
                 font-size: 12px;
             }
             #decrement {
+                grid-column: 3 / 4;
                 grid-row: 1 / 2;
                 width: auto;
                 margin: 10px;
@@ -206,5 +210,13 @@ hr {
 
 }
 
-
-
+#out-of-stock{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    text-align: center;
+    width: 60px;
+    padding: 4px;
+    margin: 10px 3px;
+    font-size: 12px;
+    color: red;
+}
