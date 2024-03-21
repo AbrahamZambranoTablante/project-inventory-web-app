@@ -1,12 +1,11 @@
 const form = document.querySelector(".form__inputs");
 
-// const inStock = document.querySelector("option-yes");
+const resetButton = document.querySelector("#reset-button");
 
-// inStock.addEventListener("click", (e) => {
-//     const numInStock = document.querySelector("#numInStock");
-//     e.target.numInStock.removeAttribute(hidden);
-// })
-
+resetButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    form.reset();
+})
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -17,7 +16,7 @@ form.addEventListener("submit", (e) => {
     const typeInput = e.target.type.value;
     const heightInput = e.target.height.value;
     const weightInput = e.target.weight.value;
-    const optionInStock = e.target.inStock.value;
+    
     
     const pokemonImage = document.createElement("img");
 
@@ -42,9 +41,32 @@ form.addEventListener("submit", (e) => {
     name.innerText = nameInput;
     type.innerText = typeInput;
     height.innerText = heightInput;
-    weight.innerText = weightInput;
-    price.innerText = priceInput;
+    weight.innerText = `${weightInput} lbs`;
+    price.innerText = `$${priceInput}.00`;
 
+    const formField = document.querySelector(".form-field");
+
+
+    if(imgUrlInput.length === 0){
+        const li = document.createElement("li");
+        li.innerText = "Please fill out Image URL field before submitting";
+        li.classList.add("error");
+        formField.appendChild(li);
+    } 
+
+    if(nameInput.length === 0){
+        const li = document.createElement("li");
+        li.innerText = "Please fill out NAME field before submitting";
+        li.classList.add("error");
+        formField.appendChild(li);
+    }
+
+    if(priceInput.length === 0){
+        const li = document.createElement("li");
+        li.innerText = "Please fill out PRICE field before submitting";
+        li.classList.add("error");
+        formField.appendChild(li);
+    }
 
     const article = document.createElement("article");
     article.classList.add("article-template");
@@ -74,14 +96,8 @@ form.addEventListener("submit", (e) => {
 
     const currentStock = document.createElement("div");
     currentStock.setAttribute("id", "stock");
-    if(optionInStock === "yes"){
-        currentStock.innerText = " In Stock";
-        stockNum.innerText = "1"
-    } else {
-        currentStock.innerText = " Out of Stock";
-        currentStock.setAttribute("id","out-of-stock");
-        stockNum.innerText = "0"
-    }
+    currentStock.innerText = " In Stock";
+    stockNum.innerText = "1";
     
 
     
@@ -107,7 +123,9 @@ form.addEventListener("submit", (e) => {
 
     const itemsField = document.querySelector(".items-field");
 
-    itemsField.append(article);
+    if(imgUrlInput.length > 0 && nameInput.length > 0 && priceInput.length > 0){
+        itemsField.append(article);
+    }
 
     deleteItem();
 
@@ -115,8 +133,12 @@ form.addEventListener("submit", (e) => {
 
     decreaseStock();
 
+    const formCotainer = document.querySelector(".form-container");
+    
     form.reset();
 });
+
+
 
 const deleteItem = () => {
 
@@ -143,6 +165,8 @@ const increaseStock = () => {
             let count =  Number(x.parentNode.querySelector(".numInStock").innerText);
             count++
             x.parentNode.querySelector(".numInStock").innerText = count;
+
+
         })
     }
     
@@ -158,8 +182,10 @@ const decreaseStock = () => {
         
         x.addEventListener("click", () => {
             let count =  Number(x.parentNode.querySelector(".numInStock").innerText);
-            count--
-            x.parentNode.querySelector(".numInStock").innerText = count;
+            if(count > 0){
+                count--
+                x.parentNode.querySelector(".numInStock").innerText = count;
+            }
         })
     }
     
@@ -171,4 +197,3 @@ deleteItem();
 increaseStock();
 
 decreaseStock();
-

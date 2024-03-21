@@ -15,21 +15,43 @@
         <img class="right"src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWlsNzFxMnhkcm1reGRoMTlvZmF0MGF5cmV4NWdoMGd4bTJ6cWl6NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/XwENvq9FeAr7zd3QD8/giphy.gif"/>
     </header>
     <main>
-        <section class="form-field">
+        <section class="form-container">
+            <section class="form-field">
             <h1>Add A New Pokemon</h1>
             <hr class="form-separation">
             <form class="form__inputs">
                 <div>
                     <label for="url">Image URL</label><br>
-                    <input name="url" type="text" id="url" required></input>
+                    <input name="url" type="text" id="url" ></input>
                 </div>
                 <div>
                     <label for="name">Name</label><br>
-                    <input name="name" type="text" id="name" required></input>
+                    <input name="name" type="text" id="name" ></input>
                 </div>
                 <div>
                     <label for="type">Type</label><br>
-                    <input name="type" type="text" id="type"></input>
+                    <select name="type" id="type">
+                    <option>~ Select One ~</option>
+                      <option class="normal" value="Normal">Normal</option>
+                      <option class="fire" value="Fire">Fire</option>
+                      <option class="water" value="Water">Water</option>
+                      <option class="electric" value="Electric">Electric</option>
+                      <option class="grass" value="Grass">Grass</option>
+                      <option class="ice" value="Ice">Ice</option>
+                      <option class="fighting" value="Fighting">Fighting</option>
+                      <option class="poison" value="Poison">Poison</option>
+                      <option class="ground" value="Ground">Ground</option>
+                      <option class="flying" value="Flying">Flying</option>
+                      <option class="psychic" value="Psychic">Psychic</option>
+                      <option class="bug" value="Bug">Bug</option>
+                      <option class="rock" value="Rock">Rock</option>
+                      <option class="ghost" value="Ghost">Ghost</option>
+                      <option class="dragon" value="Dragon">Dragon</option>
+                      <option class="dark" value="Dark">Dark</option>
+                      <option class="steel" value="Steel">Steel</option>
+                      <option class="fairy" value="Fairy">Fairy</option>
+                      <option class="stellar" value="Stellar">Stellar</option>
+                    </select>
                 </div>
                 <div>
                     <label for="height">Height</label><br>
@@ -41,26 +63,16 @@
                 </div>
                 <div>
                     <label for="price">Price</label><br>
-                    <input name="price" type="text" id="price" required></input>
+                    <input name="price" type="text" id="price" ></input>
                 </div>
-                <div>
-                    <label for="inStock">In Stock</label><br>
-                    <select name="inStock" id="inStock">
-                      <option>-- Select One --</option>
-                      <option class="option-yes" value="yes">Yes</option>
-                      <option class="option-no" value="no">No</option>
-                    </select>
-                </div>
-                <!-- <div>
-                    <label for="InStock" id="InStockLabel" hidden>Number In Stock</label><br>
-                    <input name="InStock" type="text" id="numInStock" hidden required></input>
-                </div> -->
+
                 <div id="buttons">
                     <button id="reset-button"> Reset</button>
                     <button type="submit" id="submit-botton">Submit</button>
                 </div>
             </form>
-        </section>
+            </section>
+         </section>
         <hr>
         <section class="items-field">
             <article class="article-template">
@@ -87,15 +99,15 @@
             </article>
             <article class="article-template">
                 <section id="image">
-                     <img src="https://img.pokemondb.net/artwork/large/chikorita.jpg" alt="chikorita"/>
+                     <img src="https://img.pokemondb.net/artwork/large/heracross.jpg" alt="heracross"/>
                 </section>
                 <section id="description">
-                    <h2>Chikorita</h2>
+                    <h2>Heracross</h2>
                     <div class="info">
-                        <p class="type">GRASS</p>
-                        <p class="height">2'11"</p>
-                        <p class="weight">14.1 lbs</p>
-                        <p class="price">$300.000</p>
+                        <p class="type">BUG</p>
+                        <p class="height">4'11″</p>
+                        <p class="weight">119.0 lbs</p>
+                        <p class="price">$550.000</p>
                     </div>
                     <div class="button-section">
                         <div class="stock-buttons">

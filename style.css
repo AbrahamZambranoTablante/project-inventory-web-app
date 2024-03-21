@@ -1,7 +1,6 @@
 body {
     width: auto;
     font-family: cursive;
-    background-size: 100px;
     background-image: linear-gradient(#a5e8da, #fcf4dd, #f9dee1, #a5e8da) ;
 }
 
@@ -32,8 +31,14 @@ header {
 
 }
 
+.form-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
 .form-field {
-    width: auto;
+    grid-column: 2 / 3;
+    width: 500px;
     text-align: center;
     margin: 10px 10px;
 
@@ -152,6 +157,7 @@ hr {
                 grid-row: 1 / 2;
                 grid-column: 1 / 2;
                 width: auto;
+                height: 30px;
                 margin: 10px;
                 border-radius: 10px;
                 background-color: #a5e8da;
@@ -175,6 +181,7 @@ hr {
                 grid-column: 3 / 4;
                 grid-row: 1 / 2;
                 width: auto;
+                height: 30px;
                 margin: 10px;
                 background-color: #fec4cb;
                 border: none;
@@ -207,7 +214,12 @@ hr {
     #remove:active{
         background-color:lightpink;
     }
-
+    #decrement:hover{
+        cursor: pointer;
+    }
+    #increment:hover{
+        cursor: pointer;
+    }
 }
 
 #out-of-stock{
@@ -220,3 +232,31 @@ hr {
     font-size: 12px;
     color: red;
 }
+
+.error {
+    background-color: #fec4cb;
+    margin: 0px auto;
+}
+
+@media (width >= 1069px) and (width <= 1521px){
+
+    .items-field{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 70px 50px;
+        place-items: center;
+    }
+
+}
+
+@media (width <= 1068px){
+
+    .items-field{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 70px 50px;
+        place-items: center;
+    }
+
+}
+
