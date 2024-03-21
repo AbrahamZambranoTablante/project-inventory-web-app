@@ -34,7 +34,6 @@ form.addEventListener("submit", (e) => {
     const price = document.createElement("p");
     price.classList.add("price");
 
-
     pokemonImage.setAttribute("src", imgUrlInput);
     pokemonImage.setAttribute("alt", nameInput);
 
@@ -44,28 +43,31 @@ form.addEventListener("submit", (e) => {
     weight.innerText = `${weightInput} lbs`;
     price.innerText = `$${priceInput}.00`;
 
-    const formField = document.querySelector(".form-field");
+    const errorField = document.querySelector(".error-field");
 
-
-    if(imgUrlInput.length === 0){
+    while(errorField.firstChild){
+        errorField.removeChild(errorField.lastChild);
+    }
+    
+    if(!imgUrlInput){
         const li = document.createElement("li");
         li.innerText = "Please fill out Image URL field before submitting";
         li.classList.add("error");
-        formField.appendChild(li);
+        errorField.appendChild(li);
     } 
 
-    if(nameInput.length === 0){
+    if(!nameInput){
         const li = document.createElement("li");
         li.innerText = "Please fill out NAME field before submitting";
         li.classList.add("error");
-        formField.appendChild(li);
+        errorField.appendChild(li);
     }
 
-    if(priceInput.length === 0){
+    if(!priceInput){
         const li = document.createElement("li");
         li.innerText = "Please fill out PRICE field before submitting";
         li.classList.add("error");
-        formField.appendChild(li);
+        errorField.appendChild(li);
     }
 
     const article = document.createElement("article");
@@ -99,8 +101,6 @@ form.addEventListener("submit", (e) => {
     currentStock.innerText = " In Stock";
     stockNum.innerText = "1";
     
-
-    
     const decrementButton = document.createElement("button");
     decrementButton.setAttribute("id", "decrement");
     decrementButton.innerText = "-";
@@ -123,7 +123,7 @@ form.addEventListener("submit", (e) => {
 
     const itemsField = document.querySelector(".items-field");
 
-    if(imgUrlInput.length > 0 && nameInput.length > 0 && priceInput.length > 0){
+    if(imgUrlInput.length && nameInput.length && priceInput.length){
         itemsField.append(article);
     }
 
@@ -132,8 +132,6 @@ form.addEventListener("submit", (e) => {
     increaseStock();
 
     decreaseStock();
-
-    const formCotainer = document.querySelector(".form-container");
     
     form.reset();
 });
@@ -151,8 +149,6 @@ const deleteItem = () => {
         })
     }
 };
-
-
 
 const increaseStock = () => {
     
@@ -172,7 +168,6 @@ const increaseStock = () => {
     
 };
 
-
 const decreaseStock = () => {
     
     const decreaseButton = document.querySelectorAll("#decrement");
@@ -190,7 +185,6 @@ const decreaseStock = () => {
     }
     
 };
-
 
 deleteItem();
 
