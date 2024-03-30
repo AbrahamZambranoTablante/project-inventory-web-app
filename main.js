@@ -129,9 +129,9 @@ form.addEventListener("submit", (e) => {
 
     deleteItem();
 
-    increaseStock();
+    increaseStock(incrementButton);
 
-    decreaseStock();
+    decreaseStock(decrementButton);
     
     form.reset();
 });
@@ -150,44 +150,36 @@ const deleteItem = () => {
     }
 };
 
-const increaseStock = () => {
+const increaseStock = (x) => {
     
-    const increaseButton = document.querySelectorAll("#increment");
-    
-    
-    for(let x of increaseButton){
-        
-        x.addEventListener("click", () => {
-            let count =  Number(x.parentNode.querySelector(".numInStock").innerText);
-            count++
-            x.parentNode.querySelector(".numInStock").innerText = count;
-
-
-        })
-    }
-    
+    x.addEventListener("click", () => {
+        let count =  Number(x.parentNode.querySelector(".numInStock").innerText);
+        count++;
+        x.parentNode.querySelector(".numInStock").innerText = count;
+    })
 };
 
-const decreaseStock = () => {
+const increaseButton = document.querySelectorAll("#increment");
+
+for(let x of increaseButton){
+    increaseStock(x);
+}
+
+const decreaseStock = (x) => {
     
-    const decreaseButton = document.querySelectorAll("#decrement");
-    
-    
-    for(let x of decreaseButton){
-        
-        x.addEventListener("click", () => {
-            let count =  Number(x.parentNode.querySelector(".numInStock").innerText);
-            if(count > 0){
-                count--
-                x.parentNode.querySelector(".numInStock").innerText = count;
-            }
-        })
-    }
-    
+    x.addEventListener("click", () => {
+        let count =  Number(x.parentNode.querySelector(".numInStock").innerText);
+        if(count > 0){
+            count --;
+            x.parentNode.querySelector(".numInStock").innerText = count;
+        }
+    })
+};
+
+const decreaseButton = document.querySelectorAll("#decrement");
+
+for(let x of decreaseButton){
+    decreaseStock(x);
 };
 
 deleteItem();
-
-increaseStock();
-
-decreaseStock();
